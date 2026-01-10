@@ -1,0 +1,19 @@
+A proof of concept implementation for an idea I had. No guarantees or assurances are provided in any form. This is just a test and not intended for actual use.
+
+In a standard economic system, central authorities issue prommissary notes and relies upon the implementation of authority to enforce. The money doesn't actually have to exist for example be backed by gold or another intangible asset. It relies on people accepting the premise that they trade goods and services for a form of echange that they can use in turn with other people that alsoa ccept that premise. 
+
+The concept of the app is that each person can create promissary notes to other people. The notes are cryptographically signed so that notes cannot be forged. A persons private key on the device is central to the notes that they issue.
+
+In an ideal hypothetical group using this app, people trade goods and services for other peoples promissary notes and over time they all balance out to zero meaning no one actually has to make good on their promises to pay them back as everyone owes debt to everyone else equally there is no need to settle debts.
+
+In an unfair system, where certain people do not spend as much as they earn, there is no consequence to others for example witholding assets and causing inflation, because there is an unlimited supply of potential prommissary notes. If one person accumulates other peoples bonds, it does not affect anyone else, people can keep trading as normal.
+
+It is important for people to stand by their debts, they can issue bonds, but the expectation is always that they would be an upstanding citizen and not make debts that they don't intend to pay. As such each persons bonds have a different subjective value based on their intent to fulfill them.
+
+It would be important for people to legally associate public key with a legal entity. Say for example one person creates a private key and issues a bond to someone else, they could just delete the private key and leave that debt behind them. Legally registering their public key to them as an indivdual would pin people down and to all the bonds they issue to others.
+
+It is important for people supplying goods and services to identify people based on their integrity to issue bonds. Say someone keeps creating new private keys and trying to leave escape all their previous bonds, people considering to accept bonds need to trust the individual that they will keep their private key and make good on all their bonds.
+
+The analysis and network screen provides tools identify people by their economic activity. This allows people to understand if they are economically active and can trust them to issue bonds, or whether they are unable to pay or deliberately trying to use the app in an unfair way.
+
+In an ideal scenario, this would potentially enable people to use this as the main form of currency.
