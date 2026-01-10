@@ -1,3 +1,2 @@
-Place decentbond folder in the AndroidStudio folder
+the app folder is from the android project folder
 
-Server also exists at github decentbond-server
