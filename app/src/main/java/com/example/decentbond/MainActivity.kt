@@ -74,6 +74,7 @@ import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
@@ -107,6 +108,8 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -122,6 +125,7 @@ import java.time.format.DateTimeFormatter
 import kotlin.collections.plus
 import kotlin.math.cos
 import kotlin.math.sin
+import androidx.compose.ui.Alignment.Horizontal
 
 
 var keyPair =  mutableStateOf<KeyPair?>(null)
@@ -1069,15 +1073,22 @@ private fun BondRow(bond: Bond, myPublicKey: String, sender: String, receiver: S
         Column (
             modifier = Modifier
                 .horizontalScroll(rememberScrollState())
+                .weight(0.8F)
         ){
             Text(bond.timedate + "  " + sender + " -> " + receiver, style = MaterialTheme.typography.bodyMedium)
         }
-        Text(
-            amountDisplay.toString(),
-            style = MaterialTheme.typography.bodyLarge,
-            color = if (amountDisplay >= 0) MaterialTheme.colorScheme.primary
-            else MaterialTheme.colorScheme.error
-        )
+        Column(
+            modifier = Modifier
+                .weight(0.2F)
+        ) {
+            Text(
+                amountDisplay.toString(),
+                style = MaterialTheme.typography.bodyLarge,
+                color = if (amountDisplay >= 0) MaterialTheme.colorScheme.primary
+                else MaterialTheme.colorScheme.error,
+            )
+        }
+
     }
 }
 
@@ -1321,6 +1332,7 @@ private fun BondCreateDialog(
 
                         if (!posted) {
                             errorMsg = "Could not upload bond to server"
+                            deleteBond(context,newBond)
                             return@launch
                         }
 
