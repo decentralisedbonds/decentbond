@@ -1,4 +1,5 @@
-the app folder is from the android project folder
+place all files in an app folder in android studio project folder. e.g. /home/user/AndroidStudioProjects/decentbond/app/
+open in android studio
 
 compile server using
 g++ -lssl -lcrypto server.cpp -o server
